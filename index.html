@@ -1,108 +1,220 @@
-<!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
-<title>Himalayan Auto Transport</title>
-<script>
-</script>
-<body style="background-color: #c7f0db;">
 
-<!-- Navigation -->
-<nav style="height: 120px; font-size: 20px; padding: 20px;" class="w3-bar w3-black">
-  <div style="transform: translate(0px, -25px); border-radius: 50%;" class=" w3-bar-item"><img style="margin: 10px;" width="90px" height="90px" src="logo.png"></div>
-
-
-
- <p style=" letter-spacing: 3px; transform: translate(0px, -20px);  font-size: 20px;">Himalayan Auto Transport</p>
-
-</nav>
-
-<!-- Slide Show -->
-<section style="margin: 20px; ">
-  <center>
-    <img class="mySlides" src="car1.jpg"
-  style="box-shadow: 15px 15px #8bbabb ; width:70%">
-  <img class="mySlides" src="car2.jpg"
-  style="box-shadow: 15px 15px #8bbabb ; width:70%">
-  <img class="mySlides" src="car3.jpg"
-  style="box-shadow: 15px 15px #8bbabb ; width:70%">
-</center>
-</section>
-
-<!-- Band Description -->
-<section class="w3-container w3-center w3-content" style="width:100%">
-  <span><br ><br ></span>
-
-  <h2 class="w3-wide">ABOUT US</h2>
-  
-  <p class="w3-opacity">
-    <i>- Let us assist you -</i>
-</p>
-  
-  <p style="line-height: 2.2em; font-size: large;" class="w3-justify">
-
-
-    We are a automobile transportation service that will travel to 48 states in the US. Our team of assiduous, experienced drivers will
-    completely fulfill your tasks and needs. We know that the key to a successful business relies on a number of different things from
-    the quality of your service to a healthy rapport between your clients, which are all aspects we specialize in. Even though we're
-    relatively new to the business, we believe that our passion and determination to help out clients will prove to be the greatest
-    motivating factor. 
-
-
-  </p>
-</section>
-<div  style="margin: 100px auto auto auto; background-color: aliceblue; width: 100%;" class="w3-container w3-center w3-justify" >
- 
 
  
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/addons/p5.sound.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <title>Endgame Superhero Academy </title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
-</div>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/cover/">
 
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+<style>
 
-<!-- Footer -->
-<footer style="background-color: #58a5b8;" class="w3-container w3-padding-16 w3-center  w3-large">
-  Check out our Facebook page: &emsp;<a href="https://www.facebook.com/"><i  class="fa fa-facebook-official"></i></a>
-</br ></br >
+/*
+ * Globals
+ */
 
-<span style="color:rgb(92, 236, 162) ;">And to access our service(s), contact us at:</span>
-  
-  <div style="  margin: 0 auto;" class="w3-row w3-center">
-   
-    <p><span style="color: #C7F0DB; letter-spacing: 1.5px;">Email:  himalautotransport81 @ gmail.com</span>
-      <span></br></br></span>
-
-     <span style="color: #C7F0DB; letter-spacing: 1.5px;">Phone Number: 562-991-0575</span>
-    </p>
-  </div>
-  <p class="w3-medium">
-  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-  </p>
-</footer>
-
-<script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}
-  x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 3000);
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
 }
-</script>
 
-</body>
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  padding: 20px;
+}
+
+
+
+/*
+ * Header
+ */
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+
+</style>
+
+  </head>
+
+  <body class="text-center">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Endgame Superhero Academy</h3>
+          
+          <h3 style="float: right; margin-right:50px ; " ><span id="time">0</span> seconds</h3>
+
+          <h3 style="float: right; margin-right:70px ; text-decoration: underline;" ><span id="score">0</span>/20</h3>
+
+
+
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+       <center >
+         <div id="ppnode"></div>
+
+
+
+        <div id="canvasEl" style="height: auto; width: auto; border: 10px groove rgb(241, 241, 241);"></div>
+        <br />
+        <button id="btnn" style="border-radius: 10px; border: none; background-color: rgb(241, 241, 241); font-size: 25px; padding: 7px 15px;">Start!</button>
+        <br />
+
+        <br />
+
+        <h4><u>Congratulations! </u>
+          <br />          <br />
+        </h4>
+
+        <h5>
+          Looks like you've been selected to be a superhero in order to fight Thanos! But before you face the scary purple alien, we need to make sure that you're fully trained!
+          <br />          <br />
+
+          Lucky for you, we have the state of the art training program!
+
+          <br />          <br />
+          All you need to do is point over the red star targets that appear on the screen. This involves moving around, reaching over, and striking quickly. Try to get 20 enemies in the least amount of time as possible!
+
+
+        </h5>
+
+        
+       </center>
+
+
+
+
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Marvel please don't sue me thanks</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="../../assets/js/vendor/popper.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+   
+   
+   
+   
+   
+    <script src="sketch.js"></script>
+  </body>
 </html>
-
